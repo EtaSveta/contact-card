@@ -2,7 +2,7 @@
   "name": "contact-card",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "npm run build && cd server && node server.js",
@@ -11,22 +11,13 @@
     "install": "cd client && npm install",
     "client": "cd client && npm start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EtaSveta/contact-card.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/EtaSveta/contact-card/issues"
-  },
-  "homepage": "https://github.com/EtaSveta/contact-card#readme",
   "dependencies": {
-    "concurrently": "^7.6.0"
+    "express": "^4.17.1"
   },
-  "engines": {
-    "node": "16.x",
-    "npm": "8.x"
+  "devDependencies": {
+    "concurrently": "^5.2.0"
   }
 }
