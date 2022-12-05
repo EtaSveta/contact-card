@@ -1,7 +1,13 @@
-const path = require('path');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
+
+
+const path = require('path');
+
 
 module.exports = {
+  mode: 'development',
   entry: './src/js/index.js',
   output: {
     filename: 'bundle.js',
@@ -11,7 +17,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html',
       title: 'Webpack Plugin',
-    })
+    }),
+    new WorkboxPlugin.GenerateSW()
   ],
   module: {
     rules: [
